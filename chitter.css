@@ -81,16 +81,7 @@ body{
   flex-wrap: nowrap;
 }
 
-#chitterPipe {
-  border-radius: 6px 6px 0px 0px;
-  height: 100%;
-  min-width: 590px;
-  max-width: 590px;
-  background-color: blue;
-  display: inline-block;
-  margin-left: 10px;
-  float: left;
-}
+
 
 .unnecessaryChit {
   margin-left: 10px;
@@ -101,18 +92,21 @@ body{
   height: 536px;
   min-width: 290px;
   max-width: 290px;
+  height: 100%;
   float: left;
 }
 
 
 .accountDetails {
-  height: 253;
+  height: auto;
+  min-height: 253;
   width:290;
   margin-bottom: 10px;
   border-radius: 6px;
   background-color: turquoise;
   display: flex;
   flex-direction: column;
+  border: 1px solid #e1e8ed;
 }
 
 .titleImage {
@@ -178,4 +172,71 @@ body{
   width: 264px;
   border-radius: 6px;
   border: 0;
+}
+
+.chitHolder {
+  height: 32px;
+  width: 264px;
+  border-radius: 6px;
+  background-color: white;
+  border: 1px solid #e1e8ed;
+}
+
+.chitbuttons {
+  display: none;
+}
+
+.trending {
+  height: 231px;
+  width: 260px;
+  border-radius: 6px;
+  border: 1px solid #e1e8ed;
+  background-color: #FFF;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.trendHead{
+  height: 22px;
+  width: 258px;
+  background-color: LightBlue;
+  order: 1;
+}
+
+.trends {
+  width:258px;
+  height:201px;
+  margin-top: -4px;
+  background-color: blue;
+  order: 2;
+}
+
+#chitterPipe {
+  border-radius: 6px 6px 0px 0px;
+  height: 100%;
+  min-width: 590px;
+  max-width: 590px;
+  background-color: blue;
+  display: inline-block;
+  margin-left: 10px;
+  float: left;
+}
+
+#chitHead {
+  height: 46px;
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  background-color: pink;
+  position: relative;
+  float: left;
+}
+
+#cheets {
+  width: 100%;
+  float: left;
+}
+
+.whoToFollow {
+
 }
