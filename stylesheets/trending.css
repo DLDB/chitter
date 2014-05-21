@@ -12,7 +12,7 @@
 .trendHead{
   height: 22px;
   width: 258px;
-  background-color: LightBlue;
+  background-color: #FFFFFF;
   order: 1;
 }
 
@@ -20,6 +20,6 @@
   width:258px;
   height:201px;
   margin-top: -4px;
-  background-color: blue;
+  background-color: #FFFFFF;
   order: 2;
 }

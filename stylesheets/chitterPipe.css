@@ -3,7 +3,7 @@
   height: 100%;
   min-width: 590px;
   max-width: 590px;
-  background-color: blue;
+  background-color: #FFFFFF;
   display: inline-block;
   margin-left: 10px;
   float: left;
@@ -13,7 +13,7 @@
   height: 46px;
   width: 100%;
   border-radius: 5px 5px 0 0;
-  background-color: pink;
+  background-color: #FFFFFF;
   position: relative;
   float: left;
 }

@@ -1,5 +1,5 @@
 .titleBar {
-  background-color: red;
+  background-color: #FFFFFF;
   height: 46px;
   position: fixed;
   width: 100%;
@@ -13,7 +13,7 @@
 }
 
 .primaryFunctions {
-  background-color: purple;
+  background-color: #FFFFFF;
   height: 100%;
   
   width: 409px;
@@ -21,17 +21,19 @@
 }
 
 #mainLogo {
-  background-color: white;
+  background-color: #FFFFFF;
   height: 21px;
   max-width: 24px;
   min-width: 24px;
   margin-top: 14;
+  border: 0;
+  outline: 0;
  
 }
 
 .accountControls {
   z-index: 2;
-  background-color: pink;
+  background-color: #FFFFFF;
   height: 100%;
   width: 409px;
  }

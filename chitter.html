@@ -1,7 +1,7 @@
 <html>
   <head>
     <title>Chitter</title>
-    <script type="text/javascript" src='jquery-2.1.1.min.js'></script>
+    <script src='https://code.jquery.com/jquery-2.1.0.min.js'></script>
     <script type="text/javascript" src='chitter.js'></script>
     <link rel='stylesheet' type='text/css' href='stylesheets/chitter.css'>
     <link rel='stylesheet' type='text/css' href='stylesheets/accountDetails.css'>
@@ -16,7 +16,7 @@
       <section class='centerer' id='headWrapper'>
         <nav class='primaryFunctions'>
         </nav>
-        <img id='mainLogo'>
+        <img id='mainLogo' src='images/twitterlogo.png'>
         <nav class='accountControls'>
         </nav>
       </section>
@@ -25,29 +25,65 @@
       <section id='mainDisplayArea' class='centerer'>
         <aside class='userInfo'>
           <section class='accountDetails'>
-            <img class='titleImage'></img>
+            <a class='titleImage'></a>
             <section class='idCard'>
               <div class='chitFace'>
-                <img class='headShot' src='chitFace.png'>
+                <img class='headShot' src='images/chitFace.png'>
               </div>
               <div class='chitName'>
+                <a id='realName' class='textLink'>Dan Bergquist</a>
+                <a id='handle' class='textLink'>@DanBergquist1</a>
               </div>
             </section>
             <section class='chitStats'>
+              <div id='cheetCount' class='statBox'>
+                <div class='statHead'>Cheets</div>
+                <div class='statNumber'>42</div>
+              </div>
+              <div id='followingCount' class='statBox'>
+                <div class='statHead'>Following</div>
+                <div class='statNumber'>42</div>
+              </div>
+              <div id='followersCount' class='statBox'>
+                <div class='statHead'>Followers</div>
+                <div class='statNumber'>42</div>
+              </div>
             </section>
+            <script>
+              $('.statHead').hover( function() {
+                $( this ).animate( {
+                  'color' : '#0084B4'
+                }, 'slow');
+              } )
+            </script>
 
             <section class='spoutSomeChit'>
                 
                 
                   
                   <form class='chitForm'>
-                    <div id=chitHolder>
-                    <input class='chitBox' type='text'>
-
-                    <div class='chitButtons'>
+             
+                    <textarea class='chitBox' type='text' placeholder='Compose new Cheet...' ></textarea>
+                    <script>
+                      $('.chitBox').on( "focus", function () {
+                      $( this ).css( "height", "93px" );
+                      $( this ).removeAttr('placeholder');
+                      $('.spoutSomeChit').css( "height", "400px");
+                      $('.chitbuttons').css( "display", "inline");
+                      });
+                      $('.chitBox').blur(function () {
+                          if($(".chitBox").val().length < 1) {
+                            $(this).css( "height", "32px");
+                            $('.chitbuttons').hide();
+                            $('.spoutSomeChit').css( "height", "36px");
+                          }
+                        });
+                    </script>
+                    <div id=chitButtons>
+                      <div id='chitButtons'>
                       <a class='addPics'></a>
                       <a class='locButton'></a>
-                      <span id='chitCount'></span>
+                      <span id='chitCount'>140</span>
                       <a class='cheetButton'></a>
                     <div class='chitButtons'>
                     </div>
