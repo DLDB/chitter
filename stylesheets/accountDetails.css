@@ -1,0 +1,116 @@
+.userInfo {
+  border-radius: 6px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  height: 100%;
+  min-width: 290px;
+  max-width: 290px;
+  display: inline-block;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+.accountDetails {
+  height: auto;
+  min-height: 253;
+  width:290;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  background-color: turquoise;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e1e8ed;
+}
+
+.titleImage {
+  height: 96px;
+  width: 100%;
+  border: 0;
+  border-radius: 4px 4px 0 0;
+  background-position-y: 50%;
+  background-color: orange;
+  order: 1;
+}
+
+.idCard {
+  width:100%;
+  height: 45px;
+  order: 2;
+  background-color: red;
+}
+
+.chitFace {
+  height: 73px;
+  width: 70px;
+  margin: 0 0 0 8px;
+  vertical-align: bottom;
+  position: relative;
+  top: -33px;
+  border-radius: 6px;
+  padding: 3px;
+  background-color: white;
+}
+
+.headShot {
+  height: 70px;
+  width: 70px;
+  border-radius: 5px;
+}
+
+.chitName {
+  height: 100%;
+  background-color: blue;
+  width: 206px;
+  position: relative;
+  float: right;
+  top: -79px;
+}
+
+.chitStats {
+  order: 3;
+  background-color: yellow;
+  height: 52px;
+}
+
+.spoutSomeChit {
+  order: 4;
+  background-color: purple;
+  height: auto;
+  min-height: 36;
+  border-radius: 0 0 6px 6px;
+  padding: 12px;
+}
+
+
+
+.chitBox {
+  min-height: 32px;
+  height: auto;
+  width: 264px;
+  border-radius: 6px;
+  background-color: white;
+  border: 1px solid #e1e8ed;
+  float: left;  
+}
+
+.chitBox:focus ~ .chitButtons {
+  background-color: pink;
+  height: 140px;
+  display: inline;
+}
+
+.chitBox:focus {
+  height: 93;
+}
+
+.chitButtons {
+  float: left;
+  width: 100%;
+  height: 39;
+  display: none;
+  background-color: yellow;
+}
+

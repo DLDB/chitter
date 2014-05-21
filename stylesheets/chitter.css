@@ -1,0 +1,40 @@
+body {
+  margin: 0px;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-color: #EDECE9;
+  font-size: 14px;
+  line-height: 18px;
+  overflow-y: scroll;
+}
+
+.centerer {
+  max-width: 1214px;
+  min-width: 920px;
+  float: center;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+
+.wrapper {
+  height:100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#mainDisplayArea {
+  padding: 56px 0px 0px 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

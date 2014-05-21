@@ -1,0 +1,25 @@
+.trending {
+  height: 231px;
+  width: 260px;
+  border-radius: 6px;
+  border: 1px solid #e1e8ed;
+  background-color: #FFF;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.trendHead{
+  height: 22px;
+  width: 258px;
+  background-color: LightBlue;
+  order: 1;
+}
+
+.trends {
+  width:258px;
+  height:201px;
+  margin-top: -4px;
+  background-color: blue;
+  order: 2;
+}

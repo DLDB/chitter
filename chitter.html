@@ -1,7 +1,15 @@
 <html>
   <head>
     <title>Chitter</title>
-    <link rel='stylesheet' type='text/css' href='chitter.css'>
+    <script type="text/javascript" src='jquery-2.1.1.min.js'></script>
+    <script type="text/javascript" src='chitter.js'></script>
+    <link rel='stylesheet' type='text/css' href='stylesheets/chitter.css'>
+    <link rel='stylesheet' type='text/css' href='stylesheets/accountDetails.css'>
+    <link rel='stylesheet' type='text/css' href='stylesheets/titleBar.css'>
+    <link rel='stylesheet' type='text/css' href='stylesheets/trending.css'>
+    <link rel='stylesheet' type='text/css' href='stylesheets/chitterPipe.css'>
+    <link rel='stylesheet' type='text/css' href='stylesheets/unnecessaryChit.css'>
+    
   </head>
   <body>
     <header class='titleBar'>
@@ -27,21 +35,32 @@
             </section>
             <section class='chitStats'>
             </section>
-            <section class='spoutSomeChit'>
-                <div class='chitHolder'>
 
-                </div>
-                <div class='chitButtons'>
+            <section class='spoutSomeChit'>
+                
+                
+                  
                   <form class='chitForm'>
-                  <input class='chitBox' type='text'>
-                  <a class='addPics'></a>
-                  <a class='locButton'></a>
-                  <span>140</span>
-                  <button class='cheetButton'></button>
+                    <div id=chitHolder>
+                    <input class='chitBox' type='text'>
+
+                    <div class='chitButtons'>
+                      <a class='addPics'></a>
+                      <a class='locButton'></a>
+                      <span id='chitCount'></span>
+                      <a class='cheetButton'></a>
+                    <div class='chitButtons'>
+                    </div>
                   </form>
-                </div>
+                  
+               
+
+                  
+                  
+                  
               
             </section>
+
           </section>
           <section class='trending'>
             <header class='trendHead'></header>

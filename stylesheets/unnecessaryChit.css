@@ -1,0 +1,12 @@
+.unnecessaryChit {
+  margin-left: 10px;
+  border-radius: 6px;
+  background: yellow;
+  border: 1px solid #e1e8ed;
+  margin-bottom: 10px;
+  height: 536px;
+  min-width: 290px;
+  max-width: 290px;
+  height: 100%;
+  float: left;
+}
