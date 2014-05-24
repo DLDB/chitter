@@ -149,11 +149,11 @@
   background-color: #E5F2F7;
   height: 36px;
   min-height: 36px;
+  max-height: 380px;
   border-radius: 0 0 6px 6px;
   border-top: 1px solid #BFE0EC;
-  padding: 12px;
-   overflow: hidden;
-  float: hidden;
+  padding: 12 0 12 12;
+  overflow: hidden;
 }
 
 .chitBox {
@@ -168,8 +168,6 @@
   outline: 0;
   vertical-align: text-top;
   resize: none;
-  order: 1;
-  float: left;
 }
 
 .chitBox:focus {
@@ -181,13 +179,44 @@
   display: block;
 }*/
 
-#chitButtons {
-  width: 256px;
-  height: 26px;
-  padding: 4px;
+.chitButtons {
+  width: 100%;
+  min-height: 26px;
+  
   margin-bottom: 10px;
-  margin-top: 3px;
+  margin-top: 20px;
   float: left;
+  position: relative;
+}
+
+.addPics {
+  margin-left: 3px;
+  font-size: 20px;
+  padding: 5px;
+  color: #00A6CC;
+  border-radius: 6px;
+  text-align: center;
+  float: left;
+}
+
+.fa-camera {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.locButton {
+  margin-left: 15px;
+  font-size: 20px;
+  padding: 5px;
+  color: #73BBD6;
+  border-radius: 6px;
+  text-align: center;
+  float: left;
+}
+
+.cheetPoster {
+  float: right;
+  padding: 5px;
 }
 
 

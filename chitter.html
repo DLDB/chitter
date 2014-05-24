@@ -9,6 +9,7 @@
     <link rel='stylesheet' type='text/css' href='stylesheets/trending.css'>
     <link rel='stylesheet' type='text/css' href='stylesheets/chitterPipe.css'>
     <link rel='stylesheet' type='text/css' href='stylesheets/unnecessaryChit.css'>
+    <link rel='stylesheet' href='stylesheets/font-awesome-4.1.0/css/font-awesome.min.css'>
     
   </head>
   <body>
@@ -49,13 +50,6 @@
                 <div class='statNumber'>42</div>
               </div>
             </section>
-            <script>
-              $('.statHead').hover( function() {
-                $( this ).animate( {
-                  'color' : '#0084B4'
-                }, 'slow');
-              } )
-            </script>
 
             <section class='spoutSomeChit'>
                 
@@ -64,28 +58,18 @@
                   <form class='chitForm'>
              
                     <textarea class='chitBox' type='text' placeholder='Compose new Cheet...' ></textarea>
-                    <script>
-                      $('.chitBox').on( "focus", function () {
-                      $( this ).css( "height", "93px" );
-                      $( this ).removeAttr('placeholder');
-                      $('.spoutSomeChit').css( "height", "400px");
-                      $('.chitbuttons').css( "display", "inline");
-                      });
-                      $('.chitBox').blur(function () {
-                          if($(".chitBox").val().length < 1) {
-                            $(this).css( "height", "32px");
-                            $('.chitbuttons').hide();
-                            $('.spoutSomeChit').css( "height", "36px");
-                          }
-                        });
-                    </script>
-                    <div id=chitButtons>
-                      <div id='chitButtons'>
-                      <a class='addPics'></a>
-                      <a class='locButton'></a>
+                   
+                    <div class='chitButtons'>
+                      <span class='addPics'>
+                        <i class='fa fa-camera'></i>
+                      </span>
+                      <span class='locButton'>
+                        <i class='fa fa-map-marker'></i>
+                      </span>
+                      <span class='cheetPoster'>
                       <span id='chitCount'>140</span>
                       <a class='cheetButton'></a>
-                    <div class='chitButtons'>
+                      </span>
                     </div>
                   </form>
                   
