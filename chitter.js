@@ -7,7 +7,8 @@ $( document ).ready(function () {
   $('.chitBox').focus(function () {
     $( this ).css( "height", "93px" );
     $( this ).removeAttr('placeholder');
-    $('.spoutSomeChit').css( "height", "400px");
+    $('.accountDetails').css( "height", "460px");
+    $('.spoutSomeChit').css( "height", "auto");
     $('.chitForm').css("height", "380px");
     $('.chitButtons').css("margin-top", "10px");
     $(this).css("color","#000000")
@@ -18,6 +19,7 @@ $( document ).ready(function () {
       $(this).attr("placeholder", "Compose new Cheet...");
       $('.spoutSomeChit').css( "height", "36px");
       $('.chitButtons').css("margin-top", "20px");
+      $('.accountDetails').css( "height", "253px");
     }
     else {
       $(this).css("color","#8899B3")
@@ -30,5 +32,16 @@ $( document ).ready(function () {
     $(this).css('border','0');
     $(this).css('padding','5px');
   })
+  $('.chitBox').bind('input propertychange',function() {
+    var cheetText = $(this).val();
+    var charactersLeft = 140 - cheetText.length;
+    $('.chitCount').html(charactersLeft)
+  });
+  $('.cheetButton').hover(function() {
+      $(this).css('background-color', '#0084B4');
+    }, function() {
+      $(this).css('background-color', '#73BBD6');
+  })
 });
+
 
