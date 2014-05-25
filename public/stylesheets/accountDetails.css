@@ -246,6 +246,7 @@
   bottom: 3;
   right: 3;
   cursor: pointer;
+  transition: all .15s ease-in-out;
 }
 
 .cheetLabel {

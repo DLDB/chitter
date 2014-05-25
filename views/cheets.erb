@@ -2,7 +2,8 @@
   <head>
     <title>Chitter</title>
     <script src='https://code.jquery.com/jquery-2.1.0.min.js'></script>
-    <script type="text/javascript" src='chitter.js'></script>
+    <script type="text/javascript" src='javascripts/chitter.js'></script>
+    <script type="text/javascript" src='javascripts/jquery.infinitescroll.min.js'></script>
     <link rel='stylesheet' type='text/css' href='stylesheets/chitter.css'>
     <link rel='stylesheet' type='text/css' href='stylesheets/accountDetails.css'>
     <link rel='stylesheet' type='text/css' href='stylesheets/titleBar.css'>
@@ -13,15 +14,52 @@
     
   </head>
   <body>
+
     <header class='titleBar'>
       <section class='centerer' id='headWrapper'>
         <nav class='primaryFunctions'>
+          <div id="homeButton" class='primaryButton'>
+            <img class='primaryImage' src='/images/HomeLogo.png'>
+            <span class='primaryText' id='homeText'>Home</span>
+            <div class='hoverBar' id='homeBar'></div>
+          </div>
+          <div id="notificationButton" class='primaryButton'>
+            <img class='primaryImage' src='images/NotificationsLogo.png'>
+            <span class='primaryText' id='notificationText'>Notifications</span>
+            <div class='hoverBar' id='notificationBar'></div>
+          </div>
+          <div id="discoverButton" class='primaryButton'>
+          <img class='primaryImage' src='images/DiscoverLogo.png'>
+            <span class='primaryText' id='discoverText'>Discover</span>
+            <div class='hoverBar' id='discoverBar'></div>
+          </div>
+          <div id="meButton" class='primaryButton'>
+          <img class='primaryImage' src='images/MeLogo.png'>
+            <span class='primaryText' id='meText'>Me</span>
+            <div class='hoverBar' id='meBar'></div>
+          </div>
         </nav>
         <img id='mainLogo' src='images/twitterlogo.png'>
         <nav class='accountControls'>
+          <section class='searchWrapper'>
+            <input class='searchBox' placeholder='Search'>
+            <span class='searchIcon'>
+              <i class='fa fa-search'></i>
+            </span>
+          </section>
+          <section class='accountButtons'>
+          <span class='messageButton'></span>
+            <img id='messageLogo' src='images/MessagesLogo.png' class='accountLogo'>
+          <span class='settingsButton'></span>
+            <img id='settingsLogo' src='images/SettingsLogo.png' class='accountLogo'>
+          <span class='globalCheet'>
+            <img src='images/ComposeLogoDark.png'>
+          </span>
+          </section>
         </nav>
       </section>
     </header>
+
     <section class='wrapper'>
       <section id='mainDisplayArea' class='centerer'>
         <aside class='userInfo'>
@@ -32,8 +70,8 @@
                 <img class='headShot' src='images/chitFace.png'>
               </div>
               <div class='chitName'>
-                <a id='realName' class='textLink'>Dan Bergquist</a>
-                <a id='handle' class='textLink'>@DanBergquist1</a>
+                <a id='realName' class='textLink'>Daniel Bergquist</a>
+                <a id='handle' class='textLink'>@NotLeastEast</a>
               </div>
             </section>
             <section class='chitStats'>
