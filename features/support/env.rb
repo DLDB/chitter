@@ -2,17 +2,20 @@
 
 ENV['RACK_ENV'] = 'test'
 
-require File.join(File.dirname(__FILE__), '..', '..', 'chitter.rb')
+require File.join(File.dirname(__FILE__), '..', '..', 'app/server.rb')
 
 require 'capybara'
 require 'capybara/cucumber'
 require 'rspec'
+require 'database_cleaner'
 
 def app
   Sinatra::Application
 end
 
 Capybara.app = app
+
+DatabaseCleaner.strategy = :transaction
 
 class ChitterWorld
   include Capybara::DSL
@@ -23,3 +26,4 @@ end
 World do
   ChitterWorld.new
 end
+
