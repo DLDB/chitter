@@ -1,5 +1,6 @@
 post '/signin' do
-  username, password = [params[:username], params[:password]]
+  username = '@' + params[:username].delete('@')
+  password = params[:password]
   user = User.authenticate(username, password)
   if user
     session[:user_id] = user.id

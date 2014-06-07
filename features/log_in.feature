@@ -18,3 +18,11 @@ And I fill in the username correctly
 And I fill in the password incorrectly
 And I press "Sign In"
 Then I should see "Username or Password incorrect"
+
+Scenario: Logging in with valid details
+Given I have an account
+When I am on the homepage
+And I fill in the username correctly
+And I fill in the password correctly
+And I press "Sign In"
+Then I should see "@alicelikesoranges"

@@ -1,7 +1,7 @@
 post '/signup' do
   @user = User.create(name: params["name"], 
     email: params["email"], 
-    username: params["username"], 
+    username: '@' + params["username"].delete('@'), 
     password: params["password"],
     password_confirmation: params["password_confirmation"])
   if @user.save

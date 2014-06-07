@@ -13,7 +13,7 @@ end
 
 Given /^(?:|I )have an account$/ do
   User.create(name: 'alice',
-            username: 'alicelikesoranges',
+            username: '@alicelikesoranges',
             email: "alice@example.com", 
             password: "oranges!", 
             password_confirmation: "oranges!")
@@ -44,10 +44,10 @@ When /^(?:|I )fill in the username incorrectly$/ do
 end
 
 When /^(?:|I )fill in the password incorrectly$/ do
-  fill_in :password, with: 'psswrd'
+  fill_in :password, with: 'orange!'
 end
 
 When /^(?:|I )fill in the password correctly$/ do
-  fill_in :password, with: 'passwrd'
+  fill_in :password, with: 'oranges!'
 end
 

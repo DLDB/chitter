@@ -1,6 +1,4 @@
-<div class='flash'>
-  <%= flash[:notice] %>
-</div>
+
 
 <section id='mainDisplayArea' class='centerer'>
   <aside class='userInfo'>
@@ -12,7 +10,7 @@
         </div>
         <div class='chitName'>
           <a id='realName' class='textLink'>Daniel Bergquist</a>
-          <a id='handle' class='textLink'>@NotLeastEast</a>
+          <a id='handle' class='textLink'><%= @user.username %></a>
         </div>
       </section>
       <section class='chitStats'>

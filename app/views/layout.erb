@@ -64,6 +64,10 @@
       </section>
     </header>
     <section class='wrapper'>
+      <div class='flash'>
+        <%= flash[:error] %>
+        <%= flash[:notice] %>
+      </div>
       <%= yield %>
     </section>
   </body>
