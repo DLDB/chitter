@@ -9,7 +9,7 @@ post '/signup' do
     flash[:notice] = "Sign up successful!"
     redirect to('/')
   else
-    flash[:error] = 'Your password and password confirmation must match'
+    flash.now[:error] = @user.errors.full_messages
     erb :signup
   end
 end

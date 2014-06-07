@@ -8,6 +8,8 @@ require 'capybara'
 require 'capybara/cucumber'
 require 'rspec'
 require 'database_cleaner'
+require 'factory_girl'
+require_relative '../../spec/factories/user'
 
 def app
   Sinatra::Application
@@ -21,9 +23,11 @@ class ChitterWorld
   include Capybara::DSL
   include RSpec::Expectations
   include RSpec::Matchers
+  include FactoryGirl::Syntax::Methods
 end
 
 World do
+
   ChitterWorld.new
 end
 

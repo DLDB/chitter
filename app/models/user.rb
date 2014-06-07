@@ -9,10 +9,11 @@ class User
   property :id, Serial
   property :name, String
   property :email, String
-  property :username, String
+  property :username, String, unique: true
   property :password_digest, Text
 
   validates_confirmation_of :password, message: "Your password and password confirmation must match"
+  validates_uniqueness_of :username, message: "A user already exists with that username"
 
   def password=(password)
     @password = password

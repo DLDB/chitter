@@ -1,5 +1,5 @@
 def sign_up(name = 'alice',
-            username = 'alicelikesoranges',
+            username = '@alicelikesoranges',
             email = "alice@example.com", 
             password = "oranges!", 
             password_confirmation = "oranges!")
@@ -49,5 +49,18 @@ end
 
 When /^(?:|I )fill in the password correctly$/ do
   fill_in :password, with: 'oranges!'
+end
+
+Given(/^there is already a user with the username '@alicelikesoranges'$/) do
+  create( :user )
+  expect(User.count).to eq 1
+end
+
+When(/^I signup with the username '@alicelikesoranges'$/) do
+  sign_up
+end
+
+Then(/^there should be (\d+) registered users$/) do |arg1|
+  expect(User.count).to eq arg1.to_i
 end
 

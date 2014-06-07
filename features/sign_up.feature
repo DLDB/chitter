@@ -17,3 +17,9 @@ When I submit valid sign up information
 Then 1 user should be added to the database
 Then I should see "Sign up successful"
 
+Scenario: A user tries to create a username that already exists
+Given I am on the signup page
+And there is already a user with the username '@alicelikesoranges'
+When I signup with the username '@alicelikesoranges'
+Then there should be 1 registered users
+And I should see "A user already exists with that username"

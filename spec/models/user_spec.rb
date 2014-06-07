@@ -4,7 +4,7 @@ describe User do
   
   context 'managing users' do
 
-
+   
   end
 
 end
