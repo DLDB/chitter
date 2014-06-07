@@ -11,6 +11,7 @@ require 'database_cleaner'
 require 'factory_girl'
 require_relative '../../spec/factories/user'
 
+
 def app
   Sinatra::Application
 end

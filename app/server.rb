@@ -2,6 +2,7 @@ require 'sinatra'
 require 'data_mapper'
 require 'sinatra/partial'
 require 'rack-flash'
+require 'bcrypt'
 require_relative 'helpers/chitter'
 require_relative 'controllers/welcome'
 require_relative 'controllers/signup'
@@ -16,6 +17,7 @@ set :partial_template_engine, :erb
 use Rack::Flash
 
 require_relative 'models/user'
+require_relative 'models/cheet'
 
 DataMapper.finalize
 DataMapper.auto_upgrade!

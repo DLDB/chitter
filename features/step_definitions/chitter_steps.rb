@@ -80,3 +80,12 @@ When(/^I click "(.*?)"$/) do |arg1|
   find(arg1).click
 end
 
+When(/^I submit a message$/) do
+  fill_in :cheet, with: 'This is a message'
+  find('.composeButton').click
+end
+
+Then(/^I will see "(.*?)" within "(.*?)"$/) do |arg1, arg2|
+  expect(find(arg2)).to have_content(arg1)
+end
+

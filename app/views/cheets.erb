@@ -10,7 +10,13 @@
         </div>
         <div class='chitName'>
           <a id='realName' class='textLink'>Daniel Bergquist</a>
-          <a id='handle' class='textLink'><%= @user.username %></a>
+          <a id='handle' class='textLink'>
+          <% if @user %>
+            <%= @user.username %>
+          <% else %>
+            @guest
+          <% end %>
+          </a>
         </div>
       </section>
       <section class='chitStats'>
@@ -31,9 +37,9 @@
         
         
         
-        <form class='chitForm'>
+        <form class='chitForm' action='/cheets' method='post'>
           
-          <textarea class='chitBox' type='text' placeholder='Compose new Cheet...' ></textarea>
+          <textarea class='chitBox' type='text' placeholder='Compose new Cheet...' name='cheet'></textarea>
           
           <div class='chitButtons'>
             <span class='addPics'>
@@ -45,7 +51,7 @@
             <span class='cheetPoster'>
             <span class='chitCount'>140</span>
             <div class='cheetButton'>
-              <img class=composeButton src='images/ComposeLogoDark.png'>
+              <input type='image' class='composeButton' src='images/ComposeLogoDark.png'>
               <span class='cheetLabel'>Cheet</span>
             </div>
             </span>
@@ -81,21 +87,17 @@
 <header id='chitHead'>
   <h2 id='chitterHeader'>Cheets</h2>
 </header>
+<% if !@cheets.any? %>
+  No Cheets Yet!
+<% else %>
 <section id='cheets'>
   <ol id='cheetList'>
-    <li class='cheet'></li>
-    <li class='cheet'></li>
-    <li class='cheet'></li>
-    <li class='cheet'></li>
-    <li class='cheet'></li>
-    <li class='cheet'></li>
-    <li class='cheet'></li>
-    <li class='cheet'></li>
-    <li class='cheet'></li>
-    <li class='cheet'></li>
-    <li class='cheet'></li>
+    <% @cheets.each do |cheet| %>
+      <li class='cheet'><%= cheet.content %></li>
+    <% end %>
   </ol>
 </section>
+<% end %>
 </main>
 <aside class='unnecessaryChit'>
   <section class='whoToFollow'>

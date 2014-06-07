@@ -1,10 +1,11 @@
-require 'bcrypt'
 class User
 
   attr_reader :password
   attr_accessor :password_confirmation
 
   include DataMapper::Resource
+
+  has n, :cheets, :through => Resource
 
   property :id, Serial
   property :name, String
