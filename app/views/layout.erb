@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>Chitter</title>
+    <script src='https://code.jquery.com/jquery-2.1.0.min.js'></script>
+    <script type="text/javascript" src='javascripts/chitter.js'></script>
+    <script type="text/javascript" src='javascripts/jquery.infinitescroll.min.js'></script>
+    <link rel='stylesheet' type='text/css' href='stylesheets/chitter.css'>
+    <link rel='stylesheet' type='text/css' href='stylesheets/accountDetails.css'>
+    <link rel='stylesheet' type='text/css' href='stylesheets/titleBar.css'>
+    <link rel='stylesheet' type='text/css' href='stylesheets/trending.css'>
+    <link rel='stylesheet' type='text/css' href='stylesheets/chitterPipe.css'>
+    <link rel='stylesheet' type='text/css' href='stylesheets/unnecessaryChit.css'>
+    <link rel='stylesheet' href='stylesheets/font-awesome-4.1.0/css/font-awesome.min.css'>
+                  
+  </head>
+  <body>
+    <header class='titleBar'>
+      <section class='centerer' id='headWrapper'>
+        <% if current_user %>
+        <nav class='primaryFunctions'>
+          <div id="homeButton" class='primaryButton'>
+            <img class='primaryImage' src='/images/HomeLogo.png'>
+            <span class='primaryText' id='homeText'>Home</span>
+            <div class='hoverBar' id='homeBar'></div>
+          </div>
+          <div id="notificationButton" class='primaryButton'>
+            <img class='primaryImage' src='images/NotificationsLogo.png'>
+            <span class='primaryText' id='notificationText'>Notifications</span>
+            <div class='hoverBar' id='notificationBar'></div>
+          </div>
+          <div id="discoverButton" class='primaryButton'>
+            <img class='primaryImage' src='images/DiscoverLogo.png'>
+            <span class='primaryText' id='discoverText'>Discover</span>
+            <div class='hoverBar' id='discoverBar'></div>
+          </div>
+          <div id="meButton" class='primaryButton'>
+            <img class='primaryImage' src='images/MeLogo.png'>
+            <span class='primaryText' id='meText'>Me</span>
+            <div class='hoverBar' id='meBar'></div>
+          </div>
+        </nav>
+        <% end %>
+        <img id='mainLogo' src='images/twitterlogo.png'>
+        <% if current_user %>
+        <nav class='accountControls'>
+          <section class='searchWrapper'>
+            <input class='searchBox' placeholder='Search'>
+            <span class='searchIcon'>
+            <i class='fa fa-search'></i>
+            </span>
+          </section>
+          <section class='accountButtons'>
+            <span class='messageButton'></span>
+            <img id='messageLogo' src='images/MessagesLogo.png' class='accountLogo'>
+            <span class='settingsButton'></span>
+            <img id='settingsLogo' src='images/SettingsLogo.png' class='accountLogo'>
+            <span class='globalCheet'>
+            <img src='images/ComposeLogoDark.png'>
+            </span>
+          </section>
+        </nav>
+        
+        <% end %>
+      </section>
+    </header>
+    <section class='wrapper'>
+      <%= yield %>
+    </section>
+  </body>
+</html>

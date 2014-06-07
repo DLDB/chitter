@@ -1,20 +1,19 @@
-<html>
-<head>
-</head>
-<body>
-  <h1> Welcome to Chitter! </h1>
-    <% if current_user %>
-      Sign up successful! Welcome, <%= current_user.name %>.
-    <% else %>
-      <form class='signUp' action='/signup' method='post'>
-      <h3> <strong>New to Chitter?</strong> Please sign up here</h3>
-      Full Name:<input type='text' name='name'>
-      Email:<input type='text' name='email'>
-      User Name:<input type='text' name='user_name'>
-      Password:<input type='password' name='password'>
-      Password Confirmation:<input type='password' name ='password_confirmation'>
-      <input type="submit" value="Sign Up">
-      </form>
-    <% end %>
-</body>
-</html>
+<h1> Welcome to Chitter! </h1>
+<div class='flash'>
+  <%= flash[:error] %>
+  <%= flash[:notice] %>
+</div>
+
+<h3> <strong>New to Chitter?</strong>Sign up</h3>
+<form class='signUp' action='/signup' method='get'>
+<input type='submit'  value='Sign up'>
+</form>
+
+<section class='sign-in-box'>
+  <form class='sign-in-form' action='/signin' method='post'>
+    Username: <input type='text' name='username'>
+    Password: <input type='password' name='password'>
+    <input type='submit' value='Sign In'>
+  </form>
+</section>
+

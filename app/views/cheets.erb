@@ -1,173 +1,108 @@
-<html>
-  <head>
-    <title>Chitter</title>
-    <script src='https://code.jquery.com/jquery-2.1.0.min.js'></script>
-    <script type="text/javascript" src='javascripts/chitter.js'></script>
-    <script type="text/javascript" src='javascripts/jquery.infinitescroll.min.js'></script>
-    <link rel='stylesheet' type='text/css' href='stylesheets/chitter.css'>
-    <link rel='stylesheet' type='text/css' href='stylesheets/accountDetails.css'>
-    <link rel='stylesheet' type='text/css' href='stylesheets/titleBar.css'>
-    <link rel='stylesheet' type='text/css' href='stylesheets/trending.css'>
-    <link rel='stylesheet' type='text/css' href='stylesheets/chitterPipe.css'>
-    <link rel='stylesheet' type='text/css' href='stylesheets/unnecessaryChit.css'>
-    <link rel='stylesheet' href='stylesheets/font-awesome-4.1.0/css/font-awesome.min.css'>
-    
-  </head>
-  <body>
+<div class='flash'>
+  <%= flash[:notice] %>
+</div>
 
-    <header class='titleBar'>
-      <section class='centerer' id='headWrapper'>
-        <nav class='primaryFunctions'>
-          <div id="homeButton" class='primaryButton'>
-            <img class='primaryImage' src='/images/HomeLogo.png'>
-            <span class='primaryText' id='homeText'>Home</span>
-            <div class='hoverBar' id='homeBar'></div>
-          </div>
-          <div id="notificationButton" class='primaryButton'>
-            <img class='primaryImage' src='images/NotificationsLogo.png'>
-            <span class='primaryText' id='notificationText'>Notifications</span>
-            <div class='hoverBar' id='notificationBar'></div>
-          </div>
-          <div id="discoverButton" class='primaryButton'>
-          <img class='primaryImage' src='images/DiscoverLogo.png'>
-            <span class='primaryText' id='discoverText'>Discover</span>
-            <div class='hoverBar' id='discoverBar'></div>
-          </div>
-          <div id="meButton" class='primaryButton'>
-          <img class='primaryImage' src='images/MeLogo.png'>
-            <span class='primaryText' id='meText'>Me</span>
-            <div class='hoverBar' id='meBar'></div>
-          </div>
-        </nav>
-        <img id='mainLogo' src='images/twitterlogo.png'>
-        <nav class='accountControls'>
-          <section class='searchWrapper'>
-            <input class='searchBox' placeholder='Search'>
-            <span class='searchIcon'>
-              <i class='fa fa-search'></i>
-            </span>
-          </section>
-          <section class='accountButtons'>
-          <span class='messageButton'></span>
-            <img id='messageLogo' src='images/MessagesLogo.png' class='accountLogo'>
-          <span class='settingsButton'></span>
-            <img id='settingsLogo' src='images/SettingsLogo.png' class='accountLogo'>
-          <span class='globalCheet'>
-            <img src='images/ComposeLogoDark.png'>
-          </span>
-          </section>
-        </nav>
+<section id='mainDisplayArea' class='centerer'>
+  <aside class='userInfo'>
+    <section class='accountDetails'>
+      <a class='titleImage'></a>
+      <section class='idCard'>
+        <div class='chitFace'>
+          <img class='headShot' src='images/chitFace.png'>
+        </div>
+        <div class='chitName'>
+          <a id='realName' class='textLink'>Daniel Bergquist</a>
+          <a id='handle' class='textLink'>@NotLeastEast</a>
+        </div>
       </section>
-    </header>
-
-    <section class='wrapper'>
-      <section id='mainDisplayArea' class='centerer'>
-        <aside class='userInfo'>
-          <section class='accountDetails'>
-            <a class='titleImage'></a>
-            <section class='idCard'>
-              <div class='chitFace'>
-                <img class='headShot' src='images/chitFace.png'>
-              </div>
-              <div class='chitName'>
-                <a id='realName' class='textLink'>Daniel Bergquist</a>
-                <a id='handle' class='textLink'>@NotLeastEast</a>
-              </div>
-            </section>
-            <section class='chitStats'>
-              <div id='cheetCount' class='statBox'>
-                <div class='statHead'>Cheets</div>
-                <div class='statNumber'>42</div>
-              </div>
-              <div id='followingCount' class='statBox'>
-                <div class='statHead'>Following</div>
-                <div class='statNumber'>42</div>
-              </div>
-              <div id='followersCount' class='statBox'>
-                <div class='statHead'>Followers</div>
-                <div class='statNumber'>42</div>
-              </div>
-            </section>
-
-            <section class='spoutSomeChit'>
-                
-                
-                  
-                  <form class='chitForm'>
-             
-                    <textarea class='chitBox' type='text' placeholder='Compose new Cheet...' ></textarea>
-                   
-                    <div class='chitButtons'>
-                      <span class='addPics'>
-                        <i class='fa fa-camera'></i>
-                      </span>
-                      <span class='locButton'>
-                        <i class='fa fa-map-marker'></i>
-                      </span>
-                      <span class='cheetPoster'>
-                      <span class='chitCount'>140</span>
-                      <div class='cheetButton'>
-                        <img class=composeButton src='images/ComposeLogoDark.png'>
-                        <span class='cheetLabel'>Cheet</span>
-                      </div>
-                      </span>
-                    </div>
-                  </form>
-                  
-               
-
-                  
-                  
-                  
-              
-            </section>
-
-          </section>
-          <section class='trending'>
-            <header class='trendHead'></header>
-            <div class='trends'>
-              <ul class='trendList'>
-                <li class='trendItem'></li>
-                <li class='trendItem'></li>
-                <li class='trendItem'></li>
-                <li class='trendItem'></li>
-                <li class='trendItem'></li>
-                <li class='trendItem'></li>
-                <li class='trendItem'></li>
-                <li class='trendItem'></li>
-                <li class='trendItem'></li>
-                <li class='trendItem'></li>
-              </ul>
+      <section class='chitStats'>
+        <div id='cheetCount' class='statBox'>
+          <div class='statHead'>Cheets</div>
+          <div class='statNumber'>42</div>
+        </div>
+        <div id='followingCount' class='statBox'>
+          <div class='statHead'>Following</div>
+          <div class='statNumber'>42</div>
+        </div>
+        <div id='followersCount' class='statBox'>
+          <div class='statHead'>Followers</div>
+          <div class='statNumber'>42</div>
+        </div>
+      </section>
+      <section class='spoutSomeChit'>
+        
+        
+        
+        <form class='chitForm'>
+          
+          <textarea class='chitBox' type='text' placeholder='Compose new Cheet...' ></textarea>
+          
+          <div class='chitButtons'>
+            <span class='addPics'>
+            <i class='fa fa-camera'></i>
+            </span>
+            <span class='locButton'>
+            <i class='fa fa-map-marker'></i>
+            </span>
+            <span class='cheetPoster'>
+            <span class='chitCount'>140</span>
+            <div class='cheetButton'>
+              <img class=composeButton src='images/ComposeLogoDark.png'>
+              <span class='cheetLabel'>Cheet</span>
             </div>
-          </section>
-        </aside>
-        <main id='chitterPipe'>
-          <header id='chitHead'>
-            <h2 id='chitterHeader'>Cheets</h2>
-          </header>
-          <section id='cheets'>
-            <ol id='cheetList'>
-              <li class='cheet'></li>
-              <li class='cheet'></li>
-              <li class='cheet'></li>
-              <li class='cheet'></li>
-              <li class='cheet'></li>
-              <li class='cheet'></li>      
-              <li class='cheet'></li>
-              <li class='cheet'></li>
-              <li class='cheet'></li>
-              <li class='cheet'></li>
-              <li class='cheet'></li>
-            </ol>
-          </section>
-        </main>
-        <aside class='unnecessaryChit'>
-          <section class='whoToFollow'>
-          </section>
-          <section class='aboutChitter'>
-          </section>
-        </aside>
+            </span>
+          </div>
+        </form>
+        
+        
+        
+        
+        
+        
       </section>
     </section>
-  </body>
-</html>
+    <section class='trending'>
+    <header class='trendHead'></header>
+    <div class='trends'>
+      <ul class='trendList'>
+        <li class='trendItem'></li>
+        <li class='trendItem'></li>
+        <li class='trendItem'></li>
+        <li class='trendItem'></li>
+        <li class='trendItem'></li>
+        <li class='trendItem'></li>
+        <li class='trendItem'></li>
+        <li class='trendItem'></li>
+        <li class='trendItem'></li>
+        <li class='trendItem'></li>
+      </ul>
+    </div>
+  </section>
+</aside>
+<main id='chitterPipe'>
+<header id='chitHead'>
+  <h2 id='chitterHeader'>Cheets</h2>
+</header>
+<section id='cheets'>
+  <ol id='cheetList'>
+    <li class='cheet'></li>
+    <li class='cheet'></li>
+    <li class='cheet'></li>
+    <li class='cheet'></li>
+    <li class='cheet'></li>
+    <li class='cheet'></li>
+    <li class='cheet'></li>
+    <li class='cheet'></li>
+    <li class='cheet'></li>
+    <li class='cheet'></li>
+    <li class='cheet'></li>
+  </ol>
+</section>
+</main>
+<aside class='unnecessaryChit'>
+  <section class='whoToFollow'>
+  </section>
+  <section class='aboutChitter'>
+  </section>
+</aside>
+</section>

@@ -1,9 +1,19 @@
 require 'sinatra'
 require 'data_mapper'
+require 'sinatra/partial'
+require 'rack-flash'
 require_relative 'helpers/chitter'
+require_relative 'controllers/welcome'
+require_relative 'controllers/signup'
+require_relative 'controllers/cheets'
+require_relative 'controllers/signin'
 
 env = ENV["RACK_ENV"] || "development"
 DataMapper.setup(:default, "postgres://localhost/chitter_#{env}")
+
+set :partial_template_engine, :erb
+
+use Rack::Flash
 
 require_relative 'models/user'
 
@@ -13,24 +23,6 @@ DataMapper.auto_upgrade!
 enable :sessions
 set :session_secret, 'rnPfcJXohZ7boWrbaZH+2V6XvUkVNf'
 
-get '/' do
-  erb :welcome
-end
-
-post '/signup' do
-  name = params["name"]
-  email = params["email"]
-  user_name = params["user_name"]
-  password = params["password"]
-  password_confirmation = params["password_confirmation"]
-  user = User.create(name: name, 
-    email: email, 
-    user_name: user_name, 
-    password: password,
-    password_confirmation: password_confirmation)
-  session[:user_id] = user.id
-  redirect to('/')
-end
 
 
 

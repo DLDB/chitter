@@ -1,0 +1,15 @@
+<div class='flash'>
+  <%= flash[:error] %>
+  <%= flash[:notice] %>
+</div>
+<div class='sign-up'>
+  <form class='signUp' action='/signup' method='post'>
+    <h3> <strong>New to Chitter?</strong> Please sign up here</h3>
+    Full Name:<input type='text' name='name' >
+    Email:<input type='text' name='email' >
+    User Name:<input type='text' name='username' >
+    Password:<input type='password' name='password'>
+    Password Confirmation:<input type='password' name ='password_confirmation'>
+    <input type="submit" value="Sign Up">
+  </form>
+</div>
