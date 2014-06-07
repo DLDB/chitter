@@ -126,6 +126,10 @@ input::-webkit-input-placeholder {
   left: 60px;
 }
 
+.sign-out-form{
+  display:inline;
+}
+
 .accountLogo{
   background-color: #A3ACB2;
   margin-right: 10px;

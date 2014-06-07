@@ -11,6 +11,13 @@ def sign_up(name = 'alice',
   click_button "Sign Up"
 end
 
+def sign_in(username = '@alicelikesoranges', password = "oranges!")
+      visit '/'
+      fill_in 'username', :with => username
+      fill_in 'password', :with => password
+      click_button 'Sign In'
+  end
+
 Given /^(?:|I )have an account$/ do
   User.create(name: 'alice',
             username: '@alicelikesoranges',
@@ -21,6 +28,11 @@ end
 
 Given 'I am not logged in' do
   visit '/'
+end
+
+Given /^(?:|I )am logged in$/ do
+  create(:user)
+  sign_in
 end
 
 When /^(?:|I )submit valid sign up information$/ do
@@ -62,5 +74,9 @@ end
 
 Then(/^there should be (\d+) registered users$/) do |arg1|
   expect(User.count).to eq arg1.to_i
+end
+
+When(/^I click "(.*?)"$/) do |arg1|
+  find(arg1).click
 end
 

@@ -1,3 +1,9 @@
+delete '/signin' do
+  flash[:notice] = "Good bye!"
+  session[:user_id] = nil
+  redirect to('/')
+end
+
 post '/signin' do
   username = '@' + params[:username].delete('@')
   password = params[:password]

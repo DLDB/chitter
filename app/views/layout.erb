@@ -11,7 +11,7 @@
     <link rel='stylesheet' type='text/css' href='stylesheets/chitterPipe.css'>
     <link rel='stylesheet' type='text/css' href='stylesheets/unnecessaryChit.css'>
     <link rel='stylesheet' href='stylesheets/font-awesome-4.1.0/css/font-awesome.min.css'>
-                  
+    <link rel="icon" type="image/png" href="images/poo-icon.png">
   </head>
   <body>
     <header class='titleBar'>
@@ -40,7 +40,7 @@
           </div>
         </nav>
         <% end %>
-        <img id='mainLogo' src='images/twitterlogo.png'>
+        <img id='mainLogo' src='images/poo-icon.png'>
         <% if current_user %>
         <nav class='accountControls'>
           <section class='searchWrapper'>
@@ -50,10 +50,15 @@
             </span>
           </section>
           <section class='accountButtons'>
-            <span class='messageButton'></span>
+            <span class='messageButton'>
             <img id='messageLogo' src='images/MessagesLogo.png' class='accountLogo'>
-            <span class='settingsButton'></span>
-            <img id='settingsLogo' src='images/SettingsLogo.png' class='accountLogo'>
+            </span>
+            <span class='settingsButton'>
+            <form class='sign-out-form' action='/signin' method='post'>
+            <input type="hidden" name="_method" value="delete">
+            <input type='image' id='settingsLogo' src='images/SettingsLogo.png' class='accountLogo' name='Sign Out'>
+            </form>
+            </span>
             <span class='globalCheet'>
             <img src='images/ComposeLogoDark.png'>
             </span>
