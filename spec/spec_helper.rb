@@ -5,7 +5,7 @@ require 'capybara'
 require 'rspec'
 require 'factory_girl'
 require_relative './factories/user'
-require_relative './factories/cheet'
+require_relative './factories/chit'
 require './app/server'
 
 Capybara.app = Sinatra::Application

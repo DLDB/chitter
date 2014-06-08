@@ -5,7 +5,7 @@ class User
 
   include DataMapper::Resource
 
-  has n, :cheets, :through => Resource
+  has n, :chits, :through => Resource
 
   property :id, Serial
   property :name, String

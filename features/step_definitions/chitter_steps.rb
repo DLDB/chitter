@@ -81,7 +81,7 @@ When(/^I click "(.*?)"$/) do |arg1|
 end
 
 When(/^I submit a message$/) do
-  fill_in :cheet, with: 'This is a message'
+  fill_in :chit, with: 'This is a message'
   find('.composeButton').click
 end
 

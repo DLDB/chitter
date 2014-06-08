@@ -11,7 +11,7 @@ post '/signin' do
   if user
     session[:user_id] = user.id
     flash[:notice] = "You have successfully signed in"
-    redirect to('/cheets')
+    redirect to('/chits')
   else
     flash[:error] = "Username or Password incorrect"
     redirect to('/')

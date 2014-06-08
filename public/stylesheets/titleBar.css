@@ -5,6 +5,7 @@
   width: 100%;
   border-bottom: 1px solid #78A3B8;
   overflow: hidden;
+  z-index: 10;
 }
 
 #headWrapper {
@@ -138,7 +139,7 @@ input::-webkit-input-placeholder {
   transition: all .15s ease-in-out;
 }
 
-.globalcheet{
+.globalchit{
   float: right;
   position: relative;
   bottom: 4px;

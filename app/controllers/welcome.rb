@@ -1,6 +1,6 @@
 get '/' do
   if session[:user_id]
-    redirect to('/cheets')
+    redirect to('/chits')
   else
     erb :welcome
   end

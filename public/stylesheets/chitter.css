@@ -21,7 +21,6 @@ body {
 }
 
 .wrapper {
-  height:100%;
   width: 100%;
   overflow: hidden;
 }
@@ -33,6 +32,33 @@ body {
 .textLink:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+.moduletitle {
+  height: 22px;
+  width: 258px;
+  color: #66757f;
+  font-size: 22px;
+  font-weight: 300;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #66757f;
+  line-height: 22px;
+  background-color: #FFFFFF;
+  order: 1;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+.module-small {
+  font-family: "Gotham Narrow SSm",sans-serif,Arial;
+  line-height: 1;
+  font-size: 12px;
+  color: #0084B4
+}
+
+.module-foot {
+  padding-left: 20px;
+  padding-top: 5px;
 }
 
 

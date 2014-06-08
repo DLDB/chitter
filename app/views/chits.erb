@@ -1,0 +1,168 @@
+<section id='mainDisplayArea' class='centerer'>
+  <aside class='userInfo'>
+    <section class='accountDetails'>
+      <a class='titleImage'></a>
+      <section class='idCard'>
+        <div class='chitFace'>
+          <img class='headShot' src='images/chitFace.png'>
+        </div>
+        <div class='chitName'>
+          <a id='realName' class='textLink'>
+          <% if @user %>
+            <%= @user.name %>
+          <% else %>
+            Guest Chitter
+          <% end %></a>
+          <a id='handle' class='textLink'>
+          <% if @user %>
+            <%= @user.username %>
+          <% else %>
+            @guest
+          <% end %>
+          </a>
+        </div>
+      </section>
+      <section class='chitStats'>
+        <div id='chitCount' class='statBox'>
+          <div class='statHead'>Chits</div>
+          <div class='statNumber'>42</div>
+        </div>
+        <div id='followingCount' class='statBox'>
+          <div class='statHead'>Following</div>
+          <div class='statNumber'>42</div>
+        </div>
+        <div id='followersCount' class='statBox'>
+          <div class='statHead'>Followers</div>
+          <div class='statNumber'>42</div>
+        </div>
+      </section>
+      <section class='spoutSomeChit'>
+        
+        
+        
+        <form class='chitForm' action='/chits' method='post'>
+          
+          <textarea class='chitBox' type='text' placeholder='Compose new chit...' name='chit'></textarea>
+          
+          <div class='chitButtons'>
+            <span class='addPics'>
+            <i class='fa fa-camera'></i>
+            </span>
+            <span class='locButton'>
+            <i class='fa fa-map-marker'></i>
+            </span>
+            <span class='chitPoster'>
+            <span class='chitCount'>140</span>
+            <div class='chitButton'>
+              <input type='image' class='composeButton' src='images/ComposeLogoDark.png'>
+              <span class='chit-Label'>Spout Chit</span>
+            </div>
+            </span>
+          </div>
+        </form>
+   
+      </section>
+    </section>
+    <section class='trending'>
+    <header class='moduleHead'>
+      <h3 class='moduletitle'>Trends <span class='module-small textLink'> · Change </span></h3>
+    </header>
+    <div class='trends'>
+      <ul class='trendList'>
+        <li class='trendItem textLink'>Aenean ut gravida</li>
+        <li class='trendItem textLink'>#Mauris</li>
+        <li class='trendItem textLink'>Vivamus fermentum</li>
+        <li class='trendItem textLink'>#Fusce</li>
+        <li class='trendItem textLink'>#praesent</li>
+        <li class='trendItem textLink'>Vestibulum</li>
+        <li class='trendItem textLink'>Cras quis ligula sem</li>
+        <li class='trendItem textLink'>Phasellus</li>
+        <li class='trendItem textLink'>#Aliquam</li>
+        <li class='trendItem textLink'>What a load of chit</li>
+      </ul>
+    </div>
+  </section>
+</aside>
+<main id='chitterPipe'>
+<header id='chitHead'>
+  <h2 id='chitterHeader'>Chits</h2>
+</header>
+<% if !@chits.any? %>
+  No Chits Yet!
+<% else %>
+<section id='chits'>
+  <ol class='chitList'>
+    <% @chits.reverse.each do |chit| %>
+      <li class='chit' id='<%= chit.id %>'>
+        <span class='avatar'></span>
+        <div class='chit-title'>
+        <span class='chit-user-name textLink'><%= chit.user.name %></span>
+        <span class='chit-handle chit-subhead'><%= chit.user.username %></span>
+        <span class='chit-time chit-subhead textLink'><%= time_diff(chit.created_at.to_time) %></span>
+        </div>
+        <div class='chit-content'><%= chit.content %></div>
+        
+      </li>
+    <% end %>
+  </ol>
+</section>
+<% end %>
+</main>
+<aside class='unnecessaryChit'>
+  <section class='whoToFollow'>
+    <header class='followHead'>
+    <h3 class='moduletitle'>Who to Follow <span class='module-small textLink'> ·  Refresh</span><span class='module-small textLink'> · View all </span></h3>
+    </header>
+    <ul class='chitList'>
+    <li class='peer'>
+        <span class='avatar'></span>
+        <div class='chit-title'>
+        <span class='chit-user-name textLink'>Lucky Chit</span>
+        <span class='chit-handle chit-subhead'>@LuckyChit</span>
+        </div>
+        <div class='chit-content'>Donec a lectus. Sed sit amet ipsum mauris. Donec libero egestas mattis sit augue.</div>
+        
+      </li>
+       <li class='peer'>
+        <span class='avatar'></span>
+        <div class='chit-title'>
+        <span class='chit-user-name textLink'>Happy Chit</span>
+        <span class='chit-handle chit-subhead'>@HappyChit</span>
+        </div>
+        <div class='chit-content'>Donec a lectus. Sed sit amet ipsum mauris. Donec libero egestas mattis sit augue.</div>
+        
+      </li>
+       <li class='peer'>
+        <span class='avatar'></span>
+        <div class='chit-title'>
+        <span class='chit-user-name textLink'>Chit Head</span>
+        <span class='chit-handle chit-subhead'>@Chit Head</span>
+        </div>
+        <div class='chit-content'>Donec a lectus. Sed sit amet ipsum mauris. Donec libero egestas mattis sit augue.</div>
+        
+      </li>
+      </ul>
+      <div class='module-foot'>
+      <span class='module-small textLink'>Popular accounts </span><span class='module-small textLink'>· Find friends</span>
+      </div>
+  </section>
+  <section class='aboutChitter'>
+  Developed by <a href='https://github.com/danldb'> DanLDB </a><br><br>
+  <span class='textLink'> About</span>
+  <span class='textLink'> Help</span>
+  <span class='textLink'> Terms</span>
+  <span class='textLink'> Privacy</span>
+  <span class='textLink'> Cookies</span>
+  <span class='textLink'> Ads info</span>
+  <span class='textLink'> Brand</span>
+  <span class='textLink'> Blog</span>
+  <span class='textLink'> Status</span>
+  <span class='textLink'> Apps</span>
+  <span class='textLink'> Jobs</span>
+  <span class='textLink'> Advertise</span>
+  <span class='textLink'> Businesses</span>
+  <span class='textLink'> Media</span>
+  <span class='textLink'> Developers</span>
+  </section>
+</aside>
+</section>

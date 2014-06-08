@@ -49,7 +49,7 @@ $( document ).ready(function () {
     $( this ).css("background-color","#A3ACB2");
   });
 
-  $('.globalCheet').mouseenter( function () {
+  $('.globalChit').mouseenter( function () {
     $(this).css("background-color","#0084B4");
   }).mouseleave(function () {
     $( this ).css("background-color","#71BAD5");
@@ -72,7 +72,7 @@ $( document ).ready(function () {
   $('.chitBox').blur(function () {
     if($(".chitBox").val().length < 1) {
       $(this).css( "height", "32px");
-      $(this).attr("placeholder", "Compose new Cheet...");
+      $(this).attr("placeholder", "Compose new Chit...");
       $('.spoutSomeChit').css( "height", "36px");
       $('.chitButtons').css("margin-top", "20px");
       $('.accountDetails').css( "min-height", "253px");
@@ -94,7 +94,7 @@ $( document ).ready(function () {
     var charactersLeft = 140 - cheetText.length;
     $('.chitCount').html(charactersLeft)
   });
-  $('.cheetButton').hover(function() {
+  $('.chitButton').hover(function() {
       $(this).css('background-color', '#0084B4');
     }, function() {
       $(this).css('background-color', '#73BBD6');

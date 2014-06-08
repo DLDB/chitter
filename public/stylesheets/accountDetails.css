@@ -210,7 +210,7 @@
   float: left;
 }
 
-.cheetPoster {
+.chitPoster {
   float: right;
   padding: 5px;
   position: relative;
@@ -227,7 +227,7 @@
   position: relative;
 }
 
-.cheetButton {
+.chitButton {
   cursor: pointer;
   float:left;
   background-color: #73BBD6;
@@ -249,15 +249,15 @@
   transition: all .15s ease-in-out;
 }
 
-.cheetLabel {
+.chit-Label {
   cursor: pointer;
   float: left;
   position: relative;
-  bottom: 23;
-  right: -25;
+  bottom: 33;
+  right: -16;
   font-size: 14px;
-font-weight: bold;
-line-height: normal;
+  font-weight: bold;
+  line-height: normal;
 }
 
 

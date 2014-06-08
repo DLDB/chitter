@@ -7,6 +7,8 @@ gem 'shotgun'
 gem 'bcrypt'
 gem 'rack-flash3'
 gem 'sinatra-partial'
+gem 'dm-timestamps', '~> 1.2.0'
+gem "tilt-jbuilder", ">= 0.4.0", :require => "sinatra/jbuilder"
 
 
 group :development, :test do
