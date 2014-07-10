@@ -13,13 +13,7 @@
   justify-content:space-between;
 }
 
-.primaryFunctions {
-  background-color: #FFFFFF;
-  height: 100%;
-  
-  width: 409px;
-  min-width: 204px;
-}
+
 
 .primaryButton {
   float:left;
@@ -34,20 +28,6 @@
   float: left;
   position:relative;
   left: 12px;
-}
-
-.primaryText{
-  float:left;
-  position: relative;
-  top:7px;
-  left:20px;
-  margin-right: 9px;
-margin-left: -5px;
-  color: #66757F;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 1;
 }
 
 .hoverBar{
@@ -79,30 +59,6 @@ margin-left: -5px;
   height: 100%;
   width: 409px;
  }
-
- .searchWrapper{
-  float:left;
-  height: 100%;
-  width: 182px;
- }
-
-.searchBox{
-  width: 221px;
-  height: 31px;
-  padding: 9px 27px 7px 12px;
-  font-size: 12px;
-  line-height: 1;
-  position: relative;
-  right: 0;
-  top:7;
-  z-index: 1;
-  color: #FFFFFF;
-  background-color: #A3ACB2;
-  border-radius: 21px;
-  transition: all .2s ease-in-out;
-  border:0;
-  outline: 0;
-}
 
 input::-webkit-input-placeholder {  
   color: #D9DDE0;  
@@ -152,4 +108,101 @@ input::-webkit-input-placeholder {
   text-align: center;
   border-radius: 4px;
   padding:5px 0 0 2px;
+}
+
+@media all and (min-width: 867px) {
+
+.primaryFunctions {
+    background-color: #FFFFFF;
+    height: 100%;
+    width: 409px;
+    min-width: 204px;
+  }
+
+  .primaryText{
+    float:left;
+    position: relative;
+    top:7px;
+    left:20px;
+    margin-right: 9px;
+    margin-left: -5px;
+    color: #66757F;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  .accountControls {
+    z-index: 2;
+    background-color: #FFFFFF;
+    height: 100%;
+    width: 409px;
+   }
+
+  .searchBox{
+    width: 221px;
+    height: 31px;
+    padding: 9px 27px 7px 12px;
+    font-size: 12px;
+    line-height: 1;
+    position: relative;
+    right: 0;
+    top:7;
+    z-index: 1;
+    color: #FFFFFF;
+    background-color: #A3ACB2;
+    border-radius: 21px;
+    transition: all .2s ease-in-out;
+    border:0;
+    outline: 0;
+  }
+  .searchWrapper{
+    float:left;
+    height: 100%;
+    width: 182px;
+   }
+}
+
+@media all and (max-width: 866px) {
+  .primaryText{
+    display: none;
+  }
+
+  .primaryFunctions {
+    background-color: #FFFFFF;
+    height: 100%;
+    width: 215px;
+    min-width: 204px;
+  }
+
+  .accountControls {
+    z-index: 2;
+    background-color: #FFFFFF;
+    height: 100%;
+    width: 327px;
+   }
+
+  .searchBox{
+    width: 139px;
+    height: 31px;
+    padding: 9px 27px 7px 12px;
+    font-size: 12px;
+    line-height: 1;
+    position: relative;
+    right: 0;
+    top:7;
+    z-index: 1;
+    color: #FFFFFF;
+    background-color: #A3ACB2;
+    border-radius: 21px;
+    transition: all .2s ease-in-out;
+    border:0;
+    outline: 0;
+  }
+  .searchWrapper{
+    float:left;
+    height: 100%;
+    width: 100px;
+   }
 }

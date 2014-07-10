@@ -82,33 +82,10 @@
       </ul>
     </div>
   </section>
-</aside>
-<main id='chitterPipe'>
-<header id='chitHead'>
-  <h2 id='chitterHeader'>Chits</h2>
-</header>
-<% if !@chits.any? %>
-  No Chits Yet!
-<% else %>
-<section id='chits'>
-  <ol class='chitList'>
-    <% @chits.reverse.each do |chit| %>
-      <li class='chit' id='<%= chit.id %>'>
-        <span class='avatar'></span>
-        <div class='chit-title'>
-        <span class='chit-user-name textLink'><%= chit.user.name %></span>
-        <span class='chit-handle chit-subhead'><%= chit.user.username %></span>
-        <span class='chit-time chit-subhead textLink'><%= time_diff(chit.created_at.to_time) %></span>
-        </div>
-        <div class='chit-content'><%= chit.content %></div>
-        
-      </li>
-    <% end %>
-  </ol>
-</section>
-<% end %>
-</main>
-<aside class='unnecessaryChit'>
+  <aside class='unnecessaryChit'>
+  
+
+
   <section class='whoToFollow'>
     <header class='followHead'>
     <h3 class='moduletitle'>Who to Follow <span class='module-small textLink'> ·  Refresh</span><span class='module-small textLink'> · View all </span></h3>
@@ -165,4 +142,32 @@
   <span class='textLink'> Developers</span>
   </section>
 </aside>
+
+</aside>
+<main id='chitterPipe'>
+<header id='chitHead'>
+  <h2 id='chitterHeader'>Chits</h2>
+</header>
+<% if !@chits.any? %>
+  No Chits Yet!
+<% else %>
+<section id='chits'>
+  <ol class='chitList'>
+    <% @chits.reverse.each do |chit| %>
+      <li class='chit' id='<%= chit.id %>'>
+        <span class='avatar'></span>
+        <div class='chit-title'>
+        <span class='chit-user-name textLink'><%= chit.user.name %></span>
+        <span class='chit-handle chit-subhead'><%= chit.user.username %></span>
+        <span class='chit-time chit-subhead textLink'><%= time_diff(chit.created_at.to_time) %></span>
+        </div>
+        <div class='chit-content'><%= chit.content %></div>
+        
+      </li>
+    <% end %>
+  </ol>
+</section>
+<% end %>
+</main>
+
 </section>

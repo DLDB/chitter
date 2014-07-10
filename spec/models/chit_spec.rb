@@ -24,11 +24,6 @@ describe Chit do
     it 'when there is a chit, it is displayed in the chitterPipe' do
       visit('/chits')
       expect(find('#chitterPipe')).to have_content("This is a message")
-      expect(find('#chitterPipe')).to have_content("2014-06-07 17:46:51")
-    end
-
-    it 'a timestamp is displayed on a chit' do
-
     end
    
   end
